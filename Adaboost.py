@@ -72,7 +72,7 @@ try:
 except:
     no_features=50
 
-test = SelectKBest(score_func=mutual_info_classif,k=50)
+test = SelectKBest(score_func=mutual_info_classif,k=no_features)
 fit = test.fit(X_train.as_matrix(),y_train.as_matrix())
 p_values=test.pvalues_
 scores=test.scores_
